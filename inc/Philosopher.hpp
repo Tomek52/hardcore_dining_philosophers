@@ -20,4 +20,8 @@ class Philosopher
                 Fork& rightFork);
     std::string getName() const;
     void print(std::string text) const;
+    void think();
+    void eat();
+    void dine();
+    void joinToTable();
 };
