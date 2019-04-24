@@ -44,6 +44,7 @@ project(hardcore_dining_philosophers)
 
 set(SRC_LIST
     src/main.cpp
+    src/Philosopher.cpp
 )
 
 include_directories(src)
@@ -59,6 +60,7 @@ endif (UNIX)
 
 set(TEST_SRC_LIST
     tests/test_main.cpp
+    tests/PhilosopherTests.cpp
 )
 
 link_libraries(gmock)
