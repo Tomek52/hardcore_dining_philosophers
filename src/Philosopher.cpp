@@ -12,3 +12,8 @@ Philosopher::Philosopher(const std::string& name,
                 , leftFork_(leftFork)
                 , rightFork_(rightFork)
 {}
+
+std::string Philosopher::getName() const
+{
+    return name_;
+}

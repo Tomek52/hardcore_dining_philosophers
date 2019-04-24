@@ -18,4 +18,5 @@ class Philosopher
                 Table const& dinnerTable, 
                 Fork& leftFork, 
                 Fork& rightFork);
+    std::string getName() const;
 };

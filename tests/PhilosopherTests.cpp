@@ -15,3 +15,8 @@ TEST_F(PhilosopherTests, checkIfTrueIsEqTrue)
 {
     ASSERT_TRUE(true);
 }
+
+TEST_F(PhilosopherTests, checkIfFunctionGetNameReturnProperValue)
+{
+    ASSERT_EQ(philosopher1.getName(), philosopherName);
+}
