@@ -17,3 +17,9 @@ std::string Philosopher::getName() const
 {
     return name_;
 }
+
+void Philosopher::print(std::string text) const
+{
+    std::lock_guard<std::mutex> lg(mtxLockPrint);
+    std::cout<<name_<<" "<<text<<'\n';
+}

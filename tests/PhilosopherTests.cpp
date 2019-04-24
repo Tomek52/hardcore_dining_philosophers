@@ -20,3 +20,14 @@ TEST_F(PhilosopherTests, checkIfFunctionGetNameReturnProperValue)
 {
     ASSERT_EQ(philosopher1.getName(), philosopherName);
 }
+
+TEST_F(PhilosopherTests, checkIfTrueIsEqTrue2)
+{
+    //GIVEN
+    std::string text = "testing";
+    std::string expectedStdOutput = philosopher1.getName() + " " + text + '\n';
+    testing::internal::CaptureStdout();
+    philosopher1.print(text);
+    std::string stdOutput = testing::internal::GetCapturedStdout();
+    ASSERT_EQ(expectedStdOutput, stdOutput);
+}

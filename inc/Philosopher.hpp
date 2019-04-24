@@ -19,4 +19,5 @@ class Philosopher
                 Fork& leftFork, 
                 Fork& rightFork);
     std::string getName() const;
+    void print(std::string text) const;
 };
