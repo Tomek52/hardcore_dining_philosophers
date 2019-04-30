@@ -37,7 +37,7 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_CXX_FLAGS "-Wall -Werror -pedantic -Wextra -g")
+set(CMAKE_CXX_FLAGS "-Wall -Werror -pedantic -Wextra -fsanitize=thread -O2 -g")
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE 1)
 
 project(hardcore_dining_philosophers)
