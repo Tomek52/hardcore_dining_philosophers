@@ -2,7 +2,7 @@
 
 #include <string>
 #include <thread>
-
+#include <functional>
 #include "Table.hpp"
 
 class Philosopher
@@ -20,7 +20,8 @@ class Philosopher
                 Fork& rightFork);
     std::string getName() const;
     void print(std::string text) const;
-    void think();
+    int evaluateAnswer( std::string question, std::string answer);
+    virtual void think();
     void eat();
     void dine();
     void joinToTable();
