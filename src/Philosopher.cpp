@@ -24,6 +24,7 @@ void Philosopher::print(std::string text) const
     std::cout<<name_<<" "<<text<<'\n';
 }
 
+
 void Philosopher::think()
 {
     print("started thinking");
@@ -56,4 +57,12 @@ void Philosopher::joinToTable()
 {
     std::thread t(&Philosopher::dine, this);
     t.detach();
+}
+
+int Philosopher::evaluateAnswer( std::string question, std::string answer)
+{
+        std::size_t h1 = std::hash<std::string>{}(question);
+        std::size_t h2 = std::hash<std::string>{}(answer);
+        std::size_t h3 = std::hash<std::string>{}(name_);
+        return h1 ^ (h2 << 1) ^ ( h3 << 2 ); 
 }
